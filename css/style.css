@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --bream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bream);
+    font-family: 'DM Sans';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 350px;
+}
+.head__balance {
+    background-color: var(--soft-red);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--very-pale-orange);
+}
+.charts__container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--very-pale-orange);
+    border-radius: 0.5rem;
+}
+.title__charts, .priceF__balance, .percent__balance {
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+.charts, .footer__balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.month__balance, .titleF__balance, .day_chart {
+    color: var(--medium-brown);
+}
+.footer__balance {
+    border-top: 1px solid rgba(236, 119, 95, 0.2);
+    padding-top: 1.5rem;
+    text-align: end;
+}
+.title__charts {
+    margin-bottom: 3rem;
+}
+.chart div {
+    background-color: var(--soft-red);
+    width: 35px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative
+
+}
+#wed {
+    background-color: var(--cyan) !important;
+}
+#wed:hover {
+    background-color: hsla(186, 34%, 60%, 0.45) !important;
+}
+.day_chart {
+    font-size: 12px;
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+}
+/* HOVER */
+.active {
+    font-size: 12px;
+    text-align: center;
+    background-color: var(--dark-brown);
+    color: var(--very-pale-orange);
+    font-weight: 700;
+    border-radius: 0.2rem;
+    padding: 5px;
+    display: none;
+}
+.chart div:hover {
+    background-color: hsla(10, 79%, 65%, 0.4);
+}
+.chart div:hover .active {
+    display: block;
+    position: absolute;
+    top: -31px;
+    left: -5px;
+}
+/* HOVER */
+/* CREDITS -START- */
+.attribution {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--dark-brown);
+}   
+.attribution a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+.attribution a:hover {
+    color: var(--soft-red);
+}
+/* CREDITS -END- */
